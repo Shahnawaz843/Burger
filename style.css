@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* font-family: "Poppins", sans-serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body, html{
+    background-color: #ebeff1;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;   
+}    
+
+marquee{
+    background-color: orangered;
+    color: #FFFFFF;
+}
+
+
+.navigation-bar{
+    display: flex;
+    margin-top: -0.9em;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #FFFFFF;
+    box-shadow: 10px 1px 20px rgb(160, 146, 140);
+}
+
+.logo a{
+    color: rgb(255, 68, 0);
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.logo span{
+    color: rgb(250, 171, 0);
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+}
+
+.nav-items li {
+    margin-left: 20px;
+    padding: 0.2em;
+}
+
+.nav-items li:hover{
+    box-shadow: 3px 2px 8px rgb(255, 68, 0);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.nav-items a {
+    color: #333;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+
+/* Responsive for Tablets and Mobile */
+@media screen and (max-width: 910px) {
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #333;
+        width: 200px;
+        padding: 20px;
+    }
+
+    .nav-items li {
+        margin: 10px 0;
+    }
+
+    .nav-items a{
+        color: #FFFFFF;
+    }
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-icon.active + .nav-items {
+        display: flex;
+    }
+
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 480px) {
+    .logo a {
+        font-size: 1.2em;
+    }
+
+    .search-bar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 350px;
+        right: 0;
+        background-color: #333;
+        width: 200px;
+        padding: 20px;
+    }
+}
+
+.product-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff4500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.deal-items{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.deal{
+    box-shadow: 2px 2px 8px gray;
+    width: 350px;
+    height: 300px;
+}
+
+#deal1, #deal2, #deal3{
+    padding-left: 5%;
+    padding-top: 20px;
+}
+
+button{
+    margin-left: 40px;
+    color: #ff4500;
+    border-radius: 50%;
+    border: 2px solid  #ff4500;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button:hover{
+    box-shadow: 2px 2px 8px rgb(255, 0, 0);
+}
+
+
+/* form */
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+  .col-75 #lname{
+    width: 71.7vw;
+    height: 6vh;
+    border: 1px solid rgb(182, 176, 164);
+    padding-left: 10px;
+    border-radius: 2px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+
+  }
+
+
+
+footer{
+    background-color: #d8e1e4;
+    padding-left: 2vw;
+    padding-top: 2vh;
+}
+
+ul{
+    display: flex;
+    gap: 2vw;
+    flex-wrap: wrap;
+}
+
+ul li a{
+    color: #8ba1a8;
+}
+
+#copy-right{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
